@@ -158,19 +158,20 @@ img {
   background: #ef5350;
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 600px) {
   body {
     font-size: 16px;
   }
   .card {
-    width: 50%;
+    width: calc(50% - 1rem);
   }
 }
-@media (min-width: 56rem) {
+@media (min-width: 1200px) {
   body {
     font-size: 18px;
   }
   .card {
-    width: 33.33%;
+    width: calc(33.33% - 1rem);
+  }
   }
 }
