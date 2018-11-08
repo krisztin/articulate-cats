@@ -1,11 +1,3 @@
-/*
-yellow: #ffeb3b
-purple: #6002ee
-dark: #0000ba
-red: #ef5350
-green: #66bb6a
-
-*/
 html {
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
@@ -15,7 +7,7 @@ body {
   font-size: 14px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  background: #ffeb3b;
+  background: #fff176;
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
