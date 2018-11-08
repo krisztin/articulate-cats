@@ -24,11 +24,9 @@ main {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin: auto;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  max-width: 100%;
 }
 
 .nowrap {
@@ -144,5 +142,8 @@ img {
   .card {
     width: calc(33.33% - 1rem);
   }
-  }
+}
+
+.hidden {
+  display: none;
 }
