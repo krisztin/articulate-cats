@@ -39,19 +39,18 @@ const cats = [
       description:'The Labrador Retriever, or just Labrador, is a type of retriever-gun dog. The Labrador is one of the most popular breeds of dog in Canada, the United Kingdom and the United States',
       pros:'A very good boy',
       cons:'Not actually a cat',
-      imgurl:'https://static1.squarespace.com/static/573b62e9746fb941c1458dcd/t/58bf1f27d1758e5d0c580379/1488921550603/who-we-are.jpg'
+      imgurl:'https://static1.squarespace.com/static/573b62e9746fb941c1458dcd/t/58bf1f27d1758e5d0c580379/1488921550603/who-we-are.jpg',
+      imgurlFake: 'https://catzone-tcwebsites.netdna-ssl.com/wp-content/uploads/2017/10/orange-cat-names-2.jpg'
   },
 
 ]
 const main = document.getElementById('content');
+let dog
+console.log("Hi there fellow dev! Click it to win it!")
 
 cats.forEach(cat => {
-  main.innerHTML += `
-  <article class="card">
-      <div class="img-wrapper">
-        <h2 class="breed">${cat.breed}</h2>
-        <img src="${cat.imgurl}" alt="Scottish fold">
-      </div>
+  let baseOutput = `
+        </div>
       <section class="meta-wrapper">
         <p>${cat.description}</p>
         <div class="row nowrap align-centre">
@@ -65,4 +64,33 @@ cats.forEach(cat => {
       </section>
     </article>
   `
+  let catOutput = `
+    <article class="card">
+      <div class="img-wrapper">
+        <h2 class="breed">${cat.breed}</h2>
+        <img src="${cat.imgurl}" alt="${cat.breed}">
+    `
+  let dogOutput = `
+    <article class="card dog">
+      <div class="img-wrapper">
+        <h2 class="breed">${cat.breed}<span class="hidden"> - Meow?</span></h2>
+        <img class="hidden" src="${cat.imgurl}" alt="${cat.breed}">
+        <img class="fake" src="${cat.imgurlFake}" alt="${cat.breed}">
+    `
+
+  if (cat.breed == 'Labrador') {
+    main.innerHTML += dogOutput + baseOutput
+    dog = document.querySelector('.dog')
+  } else {
+    main.innerHTML += catOutput + baseOutput 
+  }
 });
+
+dog.addEventListener('click', function(){
+  const catImg = document.querySelector('.fake')
+  const dogImg = document.querySelectorAll('.hidden')
+  dogImg.forEach(hidden => hidden.classList.remove('hidden'))
+  catImg.classList.add('hidden')
+
+  console.log("Congrats you've won!")
+})
