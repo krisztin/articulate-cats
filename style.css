@@ -1,0 +1,176 @@
+/*
+yellow: #ffeb3b
+purple: #6002ee
+dark: #0000ba
+red: #ef5350
+green: #66bb6a
+
+*/
+html {
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #ffeb3b;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: auto;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  max-width: 100%;
+}
+
+.nowrap {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.align-centre {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+small {
+  color: #3b3b3b;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  margin: 0.5rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.4);
+  -webkit-font-smoothing: antialiased;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.01);
+  transform: perspective(1px) scale(1.01);
+  -webkit-box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.34);
+}
+
+.breed {
+  color: #ffeb3b;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem;
+  margin: 0;
+  z-index: 10;
+  width: 100%;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+54,0.75+100 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(0, 0, 0, 0)),
+    color-stop(54%, rgba(0, 0, 0, 0.65)),
+    to(rgba(0, 0, 0, 0.75))
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 54%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#bf000000', GradientType=0);
+  /* IE6-9 */
+}
+
+.img-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  width: 100%;
+  overflow: hidden;
+}
+
+img {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  margin: auto;
+  width: 100%;
+}
+
+.meta-wrapper {
+  padding: 0.5rem;
+}
+
+.meta-wrapper h3,
+.meta-wrapper p {
+  padding: 0.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.pro,
+.con {
+  min-width: 1.5rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.pro {
+  background: #ffeb3b;
+}
+
+.con {
+  background: #ef5350;
+}
+
+@media screen and (min-width: 40rem) {
+  body {
+    font-size: 16px;
+  }
+  .card {
+    width: 50%;
+  }
+}
+@media (min-width: 56rem) {
+  body {
+    font-size: 18px;
+  }
+  .card {
+    width: 33.33%;
+  }
+}
