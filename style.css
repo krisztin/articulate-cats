@@ -90,11 +90,11 @@ small {
   padding-top: 56.25%;
   width: 100%;
   overflow: hidden;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 img {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
   position: absolute;
   top: -50%;
   left: -50%;
