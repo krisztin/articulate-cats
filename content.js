@@ -49,6 +49,21 @@ let dog
 console.log("Hi there fellow dev! Click it to win it!")
 
 cats.forEach(cat => {
+  let catOutput = `
+    <article class="card">
+      <div class="img-wrapper">
+        <h2 class="breed">${cat.breed}</h2>
+        <img src="${cat.imgurl}" alt="${cat.breed}">
+    `
+  let dogOutput = `
+    <article class="card dog">
+      <div class="img-wrapper">
+        <h2 class="breed fake">${cat.breed}</h2>
+        <h2 class="breed hidden">Woof, you've got me!</h2>
+        <img class="fake" src="${cat.imgurlFake}" alt="${cat.breed}">
+        <img class="hidden" src="${cat.imgurl}" alt="${cat.breed}">
+    `
+   
   let baseOutput = `
         </div>
       <section class="meta-wrapper">
@@ -64,19 +79,6 @@ cats.forEach(cat => {
       </section>
     </article>
   `
-  let catOutput = `
-    <article class="card">
-      <div class="img-wrapper">
-        <h2 class="breed">${cat.breed}</h2>
-        <img src="${cat.imgurl}" alt="${cat.breed}">
-    `
-  let dogOutput = `
-    <article class="card dog">
-      <div class="img-wrapper">
-        <h2 class="breed">${cat.breed}<span class="hidden"> - Meow?</span></h2>
-        <img class="hidden" src="${cat.imgurl}" alt="${cat.breed}">
-        <img class="fake" src="${cat.imgurlFake}" alt="${cat.breed}">
-    `
 
   if (cat.breed == 'Labrador') {
     main.innerHTML += dogOutput + baseOutput
@@ -87,10 +89,10 @@ cats.forEach(cat => {
 });
 
 dog.addEventListener('click', function(){
-  const catImg = document.querySelector('.fake')
+  const catImg = document.querySelectorAll('.fake')
   const dogImg = document.querySelectorAll('.hidden')
   dogImg.forEach(hidden => hidden.classList.remove('hidden'))
-  catImg.classList.add('hidden')
+  catImg.forEach(text => text.classList.add('hidden'))
 
   console.log("Congrats you've won!")
 })
